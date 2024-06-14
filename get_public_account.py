@@ -33,9 +33,7 @@ def sqlite_create_table():
 # 获取账号列表
 # 先通过request获取一页的账号列表，再遍历每一页的账号列表，使用DrissionPage三方库来获取每个账号的详情页提取关注的信息
 def get_account(pg_num):
-    url = ("http://tl.cyg.changyou.com/goods/public?world_id=3145&order_by=equip_point-desc&world_name=%25E7%258B%2582"
-           "%25E6%2588%2598%25E5%25A4%25A9%25E4%25B8%258B&area_name=%25E5%2594%25AF%25E7%25BE%258E%25E7%2594%25B5"
-           "%25E4%25BF%25A1&page_num={}#goodsTag".format(pg_num))
+    url = ("http://tl.cyg.changyou.com/goods/public?area_name=%25E5%2594%25AF%25E7%25BE%258E%25E7%2594%25B5%25E4%25BF%25A1&world_id=3144&world_name=%25E7%25BB%259D%25E4%25B8%2596%25E5%2594%2590%25E9%2597%25A8&order_by=price&page_num={}#goodsTag".format(pg_num))
     headers = {
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                       "Chrome/118.0.0.0 Safari/537.36"
